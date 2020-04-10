@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<select>
+    <option value="0">Select car:</option>
+    <option value="1">Audi</option>
+    <option value="2">BMW</option>
+    <option value="3">Citroen</option>
+    <option value="4">Ford</option>
+    <option value="5">Honda</option>
+    <option value="6">Jaguar</option>
+    <option value="7">Land Rover</option>
+    <option value="8">Mercedes</option>
+    <option value="9" selected>Mini</option>
+    <option value="10">Nissan</option>
+    <option value="11">Toyota</option>
+    <option value="12">Volvo</option>
+</select>
+
+<select id="mySelect1" style="margin: 20px" multiple>
+    <option value>Select...</option>
+    <option value="foo">Foo</option>
+    <option value="buz" >Buz</option>
+    <option value="foo">Foo</option>
+    <option value="buz">Buz</option>
+    <option value="foo">Foo</option>
+    <option value="buz">Buz</option>
+    <option value="foo">Foo</option>
+    <option value="buz">Buz</option>
+</select>
+
+<select id="mySelect2" style="margin: 20px">
+    <option value>Select...</option>
+    <option value="foo">Foo</option>
+    <option value="buz" label="Бах">Buz</option>
+    <option value="foo">Foo</option>
+    <option value="buz">Buz</option>
+    <option value="foo">Foo</option>
+    <option value="buz">Buz</option>
+    <option value="foo">Foo</option>
+    <option value="buz">Buz</option>
+</select>
+<script src="index.js"></script>
+<script type="module">
+  import {CustomSelect} from './index.js'
+  CustomSelect.init()
+</script>
+</body>
+</html>

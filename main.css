@@ -1,0 +1,101 @@
+.custom-select-container {
+    position: relative;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin: 20px;
+}
+.custom-select-container * {
+    box-sizing: border-box;
+}
+.custom-select-container.is-disabled {
+    opacity: .333;
+}
+.custom-select-opener {
+    font-family: sans-serif;
+    color: #444;
+    line-height: 1.3;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    padding: 2px;
+    display: block;
+    cursor: pointer;
+    width: 100px;
+    border: 1px solid #A2A4B2;
+    position: relative;
+    height: 22px;
+}
+.custom-select-container select {
+    display: none;
+}
+.custom-select-opener:before {
+    content: "";
+    border: .3em solid #000;
+    border-width: .4em .3em 0;
+    border-color: #000 transparent;
+    right: 5%;
+    top: 40%;
+    position: absolute;
+    transition: all .15s ease;
+}
+.custom-select-opener:focus{
+    outline: 0;
+}
+
+.custom-select-panel {
+    display: none;
+    max-height: 0;
+    transition: max-height .3s ease-out, overflow-y 0.1s 0.5s;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    width: 100px;
+    font-family: sans-serif;
+    color: #444;
+    line-height: 1.3;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: 0 0 .5em .5em ;
+    background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    padding: 2px;
+    border-right: 1px solid #A2A4B2;
+    border-left: 1px solid #A2A4B2;
+    border-bottom: 1px solid #A2A4B2;
+}
+
+.custom-select-panel .custom-select-option {
+    cursor: pointer;
+}
+
+.custom-select-container.is-open .custom-select-panel {
+    display: block;
+    max-height: 10.7em;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.custom-select-container.is-multiple .custom-select-panel {
+    max-height: 10.7em;
+    overflow-y: auto;
+    position: initial;
+    display: block;
+    border: 1px solid #A2A4B2;
+    border-radius: .5em  ;
+}
+
+.custom-select-container.is-open .custom-select-opener{
+    border-radius: .5em .5em 0 0;
+}
+
+.custom-select-option,.custom-select-optgroup > .custom-select-option {
+    padding: 2px;
+}
+.custom-select-optgroup::before {
+    content: attr(data-label);
+    display: block;
+    padding: 0.5em;
+    color: #888;
+}
+.is-multiple-selected{
+    background-color: #cccccc;
+}
